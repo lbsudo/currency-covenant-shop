@@ -1,6 +1,6 @@
 "use client"
-// import { useRouter } from 'next/router';
 import { SyncVariant } from '../../types';
+import Image from 'next/image';
 import { useState } from 'react';
 import { useTheme } from 'next-themes';
 
@@ -23,7 +23,7 @@ export default function ProductPage({ product }: any) {
     <>
       <div className="flex flex-wrap justify-center">
         <div className="w-1/2 p-4">
-          <img src={product.sync_product.thumbnail_url} alt={product.sync_product.name} width={200} height={200} className="w-full h-auto mb-3" />
+          <Image src={product.sync_product.thumbnail_url} alt={product.sync_product.name} width={200} height={200} className="w-full h-auto mb-3" />
         </div>
         <div className="w-1/2 p-4">
           <h1 className="text-3xl font-bold">{product.sync_product.name}</h1>

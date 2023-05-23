@@ -18,6 +18,7 @@ const API_URL = 'https://api.printful.com';
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
+
   
   const data = await res.json();
     const products: Product[] = data.result;
@@ -44,7 +45,7 @@ const API_URL = 'https://api.printful.com';
 export default async function Page() {
   const ProductData = await getHeadwear();
   const Products = ProductData.filter(product =>
-      product.sync_variants.some(variant => variant.main_category_id === 42 || variant.main_category_id === 45)
+      product.sync_variants.some((variant: any) => variant.main_category_id === 42 || variant.main_category_id === 45)
     );
 
   return(

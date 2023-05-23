@@ -1,7 +1,6 @@
 import localFont from 'next/font/local'
 import './globals.css'
 import { Providers } from './providers'
-// import { ClerkProvider } from '@clerk/nextjs'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
 

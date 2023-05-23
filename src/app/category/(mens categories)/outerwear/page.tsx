@@ -37,7 +37,6 @@ async function getOuterwear() {
     productResponses.map((response) => response.json())
   );
   const productOuterwear = productData.map((response) => response.result);
-  // console.log(productDetails)
   return productOuterwear;
 }
 
@@ -47,7 +46,7 @@ export default async function Page() {
 
   const productData = await getOuterwear();
   const products = productData.filter(product =>
-      product.sync_variants.some(variant => variant.main_category_id === 95)
+      product.sync_variants.some((variant: any) => variant.main_category_id === 95)
     );
 
 
