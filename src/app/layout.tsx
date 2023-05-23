@@ -3,6 +3,7 @@ import './globals.css'
 import { Providers } from './providers'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
+import { Product } from '../types'
 
 const roboto = localFont({
   src: './Fonts/RobotoMono-VariableFont_wght.ttf',
@@ -14,7 +15,9 @@ export const metadata = {
   description: 'The Official Store of The Covenant',
 }
 
+
 export default function RootLayout({
+
   children,
 }: {
   children: React.ReactNode
