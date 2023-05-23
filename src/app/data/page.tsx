@@ -77,27 +77,8 @@ async function getProducts() {
   return productDetails;
 }
 
-async function getCategories() {
-  const url = `${API_URL}/categories`;
-
-  const res = await fetch(url, {
-    method: 'GET',
-    headers: {
-      Authorization: `Bearer ${API_KEY}`,
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-    },
-  });
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
-}
 
 export default async function Page() {
-  const CategoryData = await getCategories();
   const StoreData = await getStoreInfo();
   const BasicData = await getBasics();
   const ProductData = await getProducts();
@@ -106,7 +87,6 @@ export default async function Page() {
     <>
       <div >
       <pre className=''>{JSON.stringify(ProductData, null, 2)}</pre>
-      <pre className=''>{JSON.stringify(CategoryData, null, 2)}</pre>
       <pre className=''>{JSON.stringify(StoreData, null, 2)}</pre>
       <pre className=''>{JSON.stringify(BasicData, null, 2)}</pre>
       </div>
