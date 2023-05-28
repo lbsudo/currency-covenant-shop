@@ -2,12 +2,13 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "@/components/ui/Navbar";
-import Script from "next/script";
 import Footer from "@/components/ui/Footer";
+import {Roboto} from 'next/font/google'
 
-const roboto = localFont({
-  src: "./Fonts/RobotoMono-VariableFont_wght.ttf",
-  display: "swap",
+const roboto = Roboto({
+  weight: '500',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata = {
