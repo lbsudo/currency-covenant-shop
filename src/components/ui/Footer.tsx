@@ -63,22 +63,21 @@ const Footer = () => {
             {/* </li> */}
           </ul>
         </div>
-        <div className="w-full sm:w-auto mt-8 sm:mt-0">
-          <h3 className="text-lg font-medium mb-4">Newsletter Signup</h3>
-          <form className="flex flex-col sm:flex-row">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className={`${isDarkMode ? 'bg-primary text-dark-primary' : 'bg-dark-primary text-primary'} w-full sm:w-auto py-2 px-4 mb-2 sm:mr-2 rounded-md border-gray-700 focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500`}
-            />
-            <button
-              type="submit"
-              className={`w-full h-10 sm:w-auto py-2 px-4 rounded-md ${isDarkMode ? 'bg-primary text-dark-primary' : 'bg-dark-primary text-primary'}  hover:bg-accent focus:outline-none focus:ring-2 focus:ring-gray-500`}
-              /* onClick={} */
-            >
-              Subscribe
-            </button>
-          </form>
+        <div className={`${isDarkMode ? 'bg-primary text-dark-primary' : 'bg-dark-primary text-primary'}w-full sm:w-auto mt-8 sm:mt-0`}>
+          {/* <h3 className="text-lg font-medium mb-4">Newsletter Signup</h3> */}
+          {/* <form className="flex flex-col sm:flex-row"> */}
+          {/*   <input */}
+          {/*     type="email" */}
+          {/*     placeholder="Enter your email address" */}
+          {/*     className={`${isDarkMode ? 'bg-primary text-dark-primary' : 'bg-dark-primary text-primary'} w-full sm:w-auto py-2 px-4 mb-2 sm:mr-2 rounded-md border-gray-700 focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500`} */}
+          {/*   /> */}
+          {/*   <button */}
+          {/*     type="submit" */}
+          {/*     className={`w-full h-10 sm:w-auto py-2 px-4 rounded-md ${isDarkMode ? 'bg-primary text-dark-primary' : 'bg-dark-primary text-primary'}  hover:bg-accent focus:outline-none focus:ring-2 focus:ring-gray-500`} */}
+          {/*   > */}
+          {/*     Subscribe */}
+          {/*   </button> */}
+          {/* </form> */}
         </div>
       </div>
     </footer>
