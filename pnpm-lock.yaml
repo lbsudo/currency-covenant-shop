@@ -49,6 +49,9 @@ dependencies:
   next-themes:
     specifier: ^0.2.1
     version: 0.2.1(next@13.4.1)(react-dom@18.2.0)(react@18.2.0)
+  pnpm:
+    specifier: ^8.6.0
+    version: 8.6.0
   postcss:
     specifier: 8.4.23
     version: 8.4.23
@@ -6574,6 +6577,12 @@ packages:
       jsonc-parser: 3.2.0
       mlly: 1.2.1
       pathe: 1.1.0
+    dev: false
+
+  /pnpm@8.6.0:
+    resolution: {integrity: sha512-uMaWGXlvG+m5NIJaR4JEEenChbg+1AP4zVpqs4PEcZg4uH+lXMTd/X/lirKZA+TC0w0d+++y3btINcwyKsuwAA==}
+    engines: {node: '>=16.14'}
+    hasBin: true
     dev: false
 
   /postcss-discard-duplicates@5.1.0(postcss@8.4.23):
