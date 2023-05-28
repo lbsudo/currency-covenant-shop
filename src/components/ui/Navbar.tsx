@@ -236,7 +236,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 {showMensDropdown && (
                   <div
                     className={` absolute top-[60px] left-0 w-full h-screen ${
-                      isDarkMode ? "bg-dark-primary  " : "bg-primary"
+                      isDarkMode ? "bg-dark-primary border-primary " : "border-dark-primary bg-primary"
                     } border-t border-b z-10`}
                     onMouseEnter={cancelHideMensDropdown}
                     onMouseLeave={hideMensDropdown}
@@ -341,7 +341,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 {showCollectionsDropdown && (
                   <div
                     className={` absolute top-[60px] left-0 w-full h-screen ${
-                      isDarkMode ? "bg-dark-primary " : "bg-primary"
+                      isDarkMode ? "bg-dark-primary border-primary" : "bg-primary border-dark-primary"
                     } border-t`}
                     onMouseEnter={cancelHideCollectionsDropdown}
                     onMouseLeave={hideCollectionsDropdown}
@@ -414,7 +414,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
       )}
       {/* Tablet and up Navigation  */}
       <nav
-        className={`hidden xl:flex relative top-0 left-0 right-0 z-0  justify-between flex-wrap pt-3 border-b ${
+        className={`hidden xl:flex relative top-0 left-0 right-0 z-20  justify-between flex-wrap pt-3 border-b ${
           isDarkMode ? "border-primary bg-dark-primary" : "border-dark-primary bg-primary"
         } 
 `}

@@ -1,33 +1,47 @@
-
-"use client"
-import React from 'react';
-import { useTheme } from 'next-themes';
+"use client";
+import React from "react";
+import { useTheme } from "next-themes";
+import { useState } from "react";
 
 const Footer = () => {
   const { theme } = useTheme();
-  const isDarkMode = theme === 'dark';
-
+  // const isDarkMode = theme === "dark";
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   return (
-    <footer className={` border-t ${isDarkMode ? 'bg-dark-primary text-primary border-primary' : 'bg-primary text-dark-primary border-dark-primary'} py-12 mt-16`}>
+    <footer
+      className={` border-t ${
+        isDarkMode
+          ? "bg-dark-primary text-primary border-primary"
+          : "bg-primary text-dark-primary border-dark-primary"
+      } py-12 mt-16`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between">
         <div className="w-full sm:w-auto mb-8 sm:mb-0">
           <h3 className="text-lg font-medium mb-2">Support</h3>
           <ul className="list-none">
             <li className="">
-              <a href="/support/contact" className="hover:text-gray-300">Contact</a>
+              <a href="/support/contact" className="hover:text-gray-300">
+                Contact
+              </a>
             </li>
             {/* <li className=""> */}
             {/*   <a href="/support/faq" className="hover:text-gray-300">FAQ</a> */}
             {/* </li> */}
             <li>
-              <a href="/support/return-policy" className="hover:text-gray-300">Return Policy</a>
+              <a href="/support/return-policy" className="hover:text-gray-300">
+                Return Policy
+              </a>
             </li>
             <li>
-              <a href="/support/shipping" className="hover:text-gray-300">Shipping</a>
+              <a href="/support/shipping" className="hover:text-gray-300">
+                Shipping
+              </a>
             </li>
             <li>
-              <a href="/support/terms-&-conditions" className="hover:text-gray-300">Terms & Conditions</a>
+              <a href="/support/terms-&-conditions" className="hover:text-gray-300">
+                Terms & Conditions
+              </a>
             </li>
             {/* <li> */}
             {/*   <a href="#" className="hover:text-gray-300">Privacy Policy</a> */}
@@ -63,7 +77,11 @@ const Footer = () => {
             {/* </li> */}
           </ul>
         </div>
-        <div className={`${isDarkMode ? 'bg-primary text-dark-primary' : 'bg-dark-primary text-primary'}w-full sm:w-auto mt-8 sm:mt-0`}>
+        <div
+          className={`${
+            isDarkMode ? "bg-primary text-dark-primary" : "bg-dark-primary text-primary"
+          }w-full sm:w-auto mt-8 sm:mt-0`}
+        >
           {/* <h3 className="text-lg font-medium mb-4">Newsletter Signup</h3> */}
           {/* <form className="flex flex-col sm:flex-row"> */}
           {/*   <input */}
@@ -85,4 +103,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

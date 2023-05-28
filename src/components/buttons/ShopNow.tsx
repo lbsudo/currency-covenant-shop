@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import { useTheme } from 'next-themes'
 
 function ShopNow() {
@@ -8,9 +9,9 @@ function ShopNow() {
   return (
     <>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-        <button className={` text-[#ECECEC] border ${isDarkMode ? 'border-primary' : 'border-primary'} px-6 py-3 rounded-none font-bold`}>
+        <Link href='/category/mens-all' className={` text-[#ECECEC] border ${isDarkMode ? 'border-primary' : 'border-primary'} px-6 py-3 rounded-none font-bold`}>
           SHOP NOW
-        </button>
+        </Link>
       </div>
     </>
   )

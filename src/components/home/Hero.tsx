@@ -10,7 +10,7 @@ export default function Hero() {
 
 
   return (
-    <div className='h-screen w-full relative'>
+    <div className='h-screen w-full z-0 relative'>
       <Image
         src={Urban}
         alt="banner"

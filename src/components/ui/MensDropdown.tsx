@@ -40,14 +40,14 @@ function MensDropdown() {
       MENS
       {showMensDropdown && (
         <div
-          className={` absolute top-[60px] left-0 w-full h-screen lg:h-12 lg:p-2 lg:flex lg:items-center ${
+          className={` absolute top-[60px] left-0 w-full h-screen xl:h-12 lg:p-2 xl:flex xl:items-center ${
             isDarkMode ? "bg-dark-primary border-primary  " : "border-dark-primary bg-primary"
           } border-t border-b`}
           onMouseEnter={cancelHideMensDropdown}
           onMouseLeave={hideMensDropdown}
         >
-          <ul className="flex flex-col lg:flex-row lg:pb-5 pt-6 justify-start items-center">
-            <button onClick={hideMensDropdown} className="lg:hidden hover:underline px-3">
+          <ul className=" flex flex-col xl:flex-row xl:pb-5 pt-6 justify-start items-center">
+            <button onClick={hideMensDropdown} className="xl:hidden hover:underline px-3">
                 [BACK]
             </button>
             <li>
