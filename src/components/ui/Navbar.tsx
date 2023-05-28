@@ -226,7 +226,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             <button onClick={handleToggle} className="snipcart-checkout">
               <ShoppingBagIcon className="w-8 h-8" />
             </button>
-            <NavSearch />
+            {/* <NavSearch /> */}
           </div>
           {/* Start section */}
           <div className="flex w-full pb-4 text-center justify-center items-center">
@@ -551,7 +551,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             )}
           </button>
 
-          <NavSearch />
+          {/* <NavSearch /> */}
           <button className="snipcart-checkout">
             <ShoppingBagIcon className="w-7 h-7 ml-1" />
           </button>
