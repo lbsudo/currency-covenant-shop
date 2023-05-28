@@ -21,12 +21,12 @@ export default function ProductPage({ product }: any) {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center">
-        <div className="w-1/2 p-4">
-          <Image src={product.sync_product.thumbnail_url} alt={product.sync_product.name} width={200} height={200} className="w-full h-auto mb-3" />
+      <div className="flex flex-col items-center xl:flex-row xl:flex-wrap xl:justify-center">
+        <div className="xl:w-1/2 xl:h-auto p-4">
+          <Image src={product.sync_product.thumbnail_url} alt={product.sync_product.name} width={1000} height={1000} className="w-full h-auto mb-3" />
         </div>
         <div className="w-1/2 p-4">
-          <h1 className="text-3xl font-bold">{product.sync_product.name}</h1>
+          <h1 className="text-lg xl:text-3xl font-bold">{product.sync_product.name}</h1>
           <p className="text-2xl font-medium">${selectedVariant.retail_price} {selectedVariant.currency}</p>
           {product.sync_variants.length > 1 &&
             <div className="relative mt-2">

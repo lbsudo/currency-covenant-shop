@@ -215,7 +215,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
       </div>
       {isOpen && (
         <nav
-          className={`xl:hidden flex flex-col items-center top-0 left-0 z-50 h-full w-full text-4xl pt-3 ${
+          className={`xl:hidden flex flex-col items-center top-0 left-0 z-50 h-full w-full text-4xl pl-3 pt-3 ${
             isDarkMode ? "border-primary bg-dark-primary" : "border-dark-primary bg-primary"
           }`}
         >

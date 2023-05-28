@@ -5,8 +5,8 @@ import { useState } from "react";
 
 const Footer = () => {
   const { theme } = useTheme();
-  // const isDarkMode = theme === "dark";
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const isDarkMode = theme === "dark";
+  // const [isDarkMode, setIsDarkMode] = useState(true);
 
   return (
     <footer

@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 import { Product } from '../../types';
 import { useState } from 'react';
 import Link from 'next/link';
@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
     >
       <div className="bg-primary p-4">
-        <img src={product.sync_product.thumbnail_url} alt={product.sync_product.name} width={24} height={24} className="w-full h-auto mb-3" />
+        <Image src={product.sync_product.thumbnail_url} alt={product.sync_product.name} width={350} height={350} className="w-full h-auto mb-3" />
       </div>
       <div className="mt-2">
         <p className="mt-2 text-sm text-center font-bold">{product.sync_product.name}</p>
