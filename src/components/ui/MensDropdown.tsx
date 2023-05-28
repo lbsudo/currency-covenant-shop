@@ -1,11 +1,11 @@
-import React from 'react'
-import { useState } from 'react';
-import Link from 'next/link';
-import { useTheme } from 'next-themes';
+import React from "react";
+import { useState } from "react";
+import Link from "next/link";
+import { useTheme } from "next-themes";
 
 function MensDropdown() {
   const { theme } = useTheme();
-  const isDarkMode = theme === 'dark';
+  const isDarkMode = theme === "dark";
 
   const [showMensDropdown, setShowMensDropdown] = useState(false);
   let timeout: NodeJS.Timeout | null = null;
@@ -32,14 +32,24 @@ function MensDropdown() {
   };
 
   return (
-    <li className="mx-3 pb-3 h-full cursor-pointer hover:underline hover:underline-offset-2" onMouseEnter={toggleMensDropdown} onMouseLeave={hideMensDropdown}>
+    <li
+      className="mx-3 pb-3 h-full cursor-pointer hover:underline hover:underline-offset-2"
+      onMouseEnter={toggleMensDropdown}
+      onMouseLeave={hideMensDropdown}
+    >
       MENS
       {showMensDropdown && (
-        <div className={` absolute top-[68px] left-0 w-full h-14 ${isDarkMode ? 'bg-dark-primary border-primary ' : 'bg-primary border-dark-primary'} border-t border-b z-10`}
+        <div
+          className={` absolute top-[60px] left-0 w-full h-screen lg:h-12 lg:p-2 lg:flex lg:items-center ${
+            isDarkMode ? "bg-dark-primary border-primary  " : "border-dark-primary bg-primary"
+          } border-t border-b`}
           onMouseEnter={cancelHideMensDropdown}
           onMouseLeave={hideMensDropdown}
         >
-          <ul className='flex flex-row pt-3 justify-start items-center'>
+          <ul className="flex flex-col lg:flex-row lg:pb-5 pt-6 justify-start items-center">
+            <button onClick={hideMensDropdown} className="lg:hidden hover:underline px-3">
+                [BACK]
+            </button>
             <li>
               <Link className="hover:underline px-3" href="/category/new-arrivals">
                 NEW ARRIVALS
@@ -95,7 +105,7 @@ function MensDropdown() {
         </div>
       )}
     </li>
-  )
+  );
 }
 
 export default MensDropdown;

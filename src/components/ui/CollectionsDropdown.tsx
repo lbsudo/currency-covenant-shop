@@ -7,24 +7,24 @@ function CollectionsDropdown() {
   const { theme } = useTheme();
   const isDarkMode = theme === 'dark';
 
-  const [showMensDropdown, setShowMensDropdown] = useState(false);
+  const [showCollectionsDropdown, setShowCollectionsDropdown] = useState(false);
   let timeout: NodeJS.Timeout | null = null;
 
-  const toggleMensDropdown = () => {
-    setShowMensDropdown(!showMensDropdown);
+  const toggleCollectionsDropdown = () => {
+    setShowCollectionsDropdown(!showCollectionsDropdown);
     if (timeout) {
       clearTimeout(timeout);
       timeout = null;
     }
   };
 
-  const hideMensDropdown = () => {
+  const hideCollectionsDropdown = () => {
     timeout = setTimeout(() => {
-      setShowMensDropdown(false);
+      setShowCollectionsDropdown(false);
     }, 200);
   };
 
-  const cancelHideMensDropdown = () => {
+  const cancelHideCollectionsDropdown = () => {
     if (timeout) {
       clearTimeout(timeout);
       timeout = null;
@@ -33,14 +33,17 @@ function CollectionsDropdown() {
 
   return (
     <li className="mx-3 pb-3 h-full cursor-pointer hover:underline hover:underline-offset-2"
-      onMouseEnter={toggleMensDropdown} onMouseLeave={hideMensDropdown}>
+      onMouseEnter={toggleCollectionsDropdown} onMouseLeave={hideCollectionsDropdown}>
       COLLECTIONS
-      {showMensDropdown && (
-        <div className={` absolute top-[68px] left-0 w-full h-14 ${isDarkMode ? 'bg-dark-primary border-primary ' : 'bg-primary border-dark-primary'} border-t border-b z-10`}
-          onMouseEnter={cancelHideMensDropdown}
-          onMouseLeave={hideMensDropdown}
+      {showCollectionsDropdown && (
+        <div className={` absolute top-[60px] left-0 w-full h-screen lg:flex lg:items-center lg:h-12 ${isDarkMode ? 'border-primary bg-dark-primary ' : 'border-dark-primary bg-primary'} border-t border-b`}
+          onMouseEnter={cancelHideCollectionsDropdown}
+          onMouseLeave={hideCollectionsDropdown}
         >
-          <ul className='flex flex-row pt-3 justify-start items-center'>
+          <ul className='flex flex-col lg:flex-row lg:pb-5 pt-6 justify-start items-center'>
+            <button onClick={hideCollectionsDropdown} className="hover:underline lg:hidden px-3">
+                [BACK]
+            </button>
             <li>
               <Link className="hover:underline px-3" href="/category/essentials">
                 CVN✦ESSENTIALS

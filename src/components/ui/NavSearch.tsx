@@ -39,7 +39,7 @@ function NavSearch({ }: Props) {
           className=''
           onClick={handleSearchClick}
         >
-          <MagnifyingGlassIcon className={`w-8 h-8 ${isDarkMode ? 'text-primary' : 'text-dark-primary'} `} /> 
+          <MagnifyingGlassIcon className={`w-7 h-7 ${isDarkMode ? 'text-primary' : 'text-dark-primary'} `} /> 
         </button>
       )}
     </>
