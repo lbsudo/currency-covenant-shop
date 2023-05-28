@@ -32,7 +32,7 @@ function MensDropdown() {
   };
 
   return (
-    <li className="mx-3 pb-5 h-full cursor-pointer hover:underline hover:underline-offset-2" onMouseEnter={toggleMensDropdown} onMouseLeave={hideMensDropdown}>
+    <li className="mx-3 pb-3 h-full cursor-pointer hover:underline hover:underline-offset-2" onMouseEnter={toggleMensDropdown} onMouseLeave={hideMensDropdown}>
       MENS
       {showMensDropdown && (
         <div className={` absolute top-[68px] left-0 w-full h-14 ${isDarkMode ? 'bg-dark-primary border-primary ' : 'bg-primary border-dark-primary'} border-t border-b z-10`}

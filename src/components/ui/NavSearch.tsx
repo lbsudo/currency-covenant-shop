@@ -22,7 +22,7 @@ function NavSearch({ }: Props) {
         <div className="relative ml-3 ">
           <div className="relative">
             <button>
-              <MagnifyingGlassIcon className='w-9 h-9 absolute top-0 left-0 pt-1 pl-3' />
+              <MagnifyingGlassIcon className='w-8 h-8 absolute top-0 left-0 ml-2 mt-1' />
               <input
                 className={`flex bg-stone-400 dark:bg-stone-400 w-full p-2 rounded-full pl-12`}
                 type="text"
@@ -36,10 +36,10 @@ function NavSearch({ }: Props) {
         </div>
       ) : (
         <button
-          className='ml-3'
+          className=''
           onClick={handleSearchClick}
         >
-          <MagnifyingGlassIcon className={`w-6 h-6 ${isDarkMode ? 'text-primary' : 'text-dark-primary'} `} /> 
+          <MagnifyingGlassIcon className={`w-8 h-8 ${isDarkMode ? 'text-primary' : 'text-dark-primary'} `} /> 
         </button>
       )}
     </>

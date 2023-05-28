@@ -16,7 +16,7 @@ function DarkModeSwitch() {
 
   return (
     <button className='' onClick={toggleDarkMode}>
-      {isDarkMode ? <SunIcon className='h-6 w-6 text-primary' /> : <MoonIcon className=' h-6 w-6 text-dark-primary' />}
+      {isDarkMode ? <SunIcon className='h-8 w-8 text-primary' /> : <MoonIcon className=' h-8 w-8 text-dark-primary' />}
     </button>
   );
 }

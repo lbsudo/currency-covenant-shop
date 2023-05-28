@@ -32,7 +32,7 @@ function CollectionsDropdown() {
   };
 
   return (
-    <li className="mx-3 pb-5 h-full cursor-pointer hover:underline hover:underline-offset-2"
+    <li className="mx-3 pb-3 h-full cursor-pointer hover:underline hover:underline-offset-2"
       onMouseEnter={toggleMensDropdown} onMouseLeave={hideMensDropdown}>
       COLLECTIONS
       {showMensDropdown && (
