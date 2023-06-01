@@ -13,16 +13,6 @@ import MensDropdown from "./MensDropdown";
 // import WomensDropdown from './WomensDropdown';
 import CollectionsDropdown from "./CollectionsDropdown";
 import { useState } from "react";
-import { Roboto } from "next/font/google";
-
-const roboto = Roboto({
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "auto",
-});
-
-
 
 interface NavbarProps {}
 
@@ -97,7 +87,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     <>
       {/* Mobile Navigation  */}
       <div
-        className={`${roboto.className}flex justify-between xl:hidden border ${
+        className={`flex justify-between xl:hidden border ${
           isDarkMode ? "bg-dark-primary" : " bg-primary"
         }`}
       >
