@@ -2,7 +2,10 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import LogoWhite from "../../../public/ui/currencyWhite.svg";
+import LogoBlack from "../../../public/ui/currencyBlack.svg";
 // import { UserButton } from "@clerk/nextjs";
 // import DarkModeSwitch from "./DarkModeSwitch";
 import NavSearch from "./NavSearch";
@@ -111,97 +114,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
         <div className="flex justify-center items-center py-1 w-12 h-12">
           <Link href={"/"}>
             {isDarkMode ? (
-              <svg
-                width="10mm"
-                height="10mm"
-                version="1.1"
-                viewBox="0 0 500 500"
-                id="svg12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs id="defs16" />
-                <g id="g10">
-                  <text
-                    x="-10.525219"
-                    y="482.90366"
-                    fill="#ffffff"
-                    font-family="Cardo"
-                    font-size="669.46px"
-                    stroke-width="106.9"
-                    id="text4"
-                  >
-                    <tspan
-                      x="-10.525219"
-                      y="482.90366"
-                      fill="#ffffff"
-                      stroke-width="106.9"
-                      id="tspan2"
-                    >
-                      C
-                    </tspan>
-                  </text>
-                  <path
-                    d="m471.87 364.26-198.9-344.5"
-                    fill="none"
-                    stroke="#fff"
-                    stroke-width="10.012"
-                    id="path6"
-                  />
-                  <path
-                    d="m250 287.99a53.572 53.572 45 0 0-37.994-37.994 53.572 53.572 135 0 0 37.994-37.994 53.572 53.572 45 0 0 37.994 37.994 53.572 53.572 135 0 0-37.994 37.994z"
-                    fill="#fff"
-                    stroke="#fff"
-                    stroke-width="6.1535"
-                    id="path8"
-                  />
-                </g>
-              </svg>
+              <Image src={LogoWhite} alt="Logo White" height={40} width={40} />
             ) : (
-              <svg
-                width="10mm"
-                height="10mm"
-                version="1.1"
-                viewBox="0 0 500 500"
-                id="svg12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs id="defs16" />
-                <g id="g10">
-                  <text
-                    x="-10.525219"
-                    y="482.90366"
-                    fill="#292929"
-                    font-family="Cardo"
-                    font-size="669.46px"
-                    stroke-width="106.9"
-                    id="text4"
-                  >
-                    <tspan
-                      x="-10.525219"
-                      y="482.90366"
-                      fill="#292929"
-                      stroke-width="106.9"
-                      id="tspan2"
-                    >
-                      C
-                    </tspan>
-                  </text>
-                  <path
-                    d="m471.87 364.26-198.9-344.5"
-                    fill="none"
-                    stroke="#292929"
-                    stroke-width="10.012"
-                    id="path6"
-                  />
-                  <path
-                    d="m250 287.99a53.572 53.572 45 0 0-37.994-37.994 53.572 53.572 135 0 0 37.994-37.994 53.572 53.572 45 0 0 37.994 37.994 53.572 53.572 135 0 0-37.994 37.994z"
-                    fill="#292929"
-                    stroke="#292929"
-                    stroke-width="6.1535"
-                    id="path8"
-                  />
-                </g>
-              </svg>
+              <Image src={LogoBlack} alt="Logo Black" height={40} width={40} />
             )}
           </Link>
         </div>
@@ -236,7 +151,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 {showMensDropdown && (
                   <div
                     className={` absolute top-[60px] left-0 w-full h-screen ${
-                      isDarkMode ? "bg-dark-primary border-primary " : "border-dark-primary bg-primary"
+                      isDarkMode
+                        ? "bg-dark-primary border-primary "
+                        : "border-dark-primary bg-primary"
                     } border-t border-b z-10`}
                     onMouseEnter={cancelHideMensDropdown}
                     onMouseLeave={hideMensDropdown}
@@ -341,7 +258,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 {showCollectionsDropdown && (
                   <div
                     className={` absolute top-[60px] left-0 w-full h-screen ${
-                      isDarkMode ? "bg-dark-primary border-primary" : "bg-primary border-dark-primary"
+                      isDarkMode
+                        ? "bg-dark-primary border-primary"
+                        : "bg-primary border-dark-primary"
                     } border-t`}
                     onMouseEnter={cancelHideCollectionsDropdown}
                     onMouseLeave={hideCollectionsDropdown}
@@ -443,97 +362,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
         <div className="flex items-center justify-center w-1/3 pb-2 flex-grow">
           <Link href={"/"}>
             {isDarkMode ? (
-              <svg
-                width="10mm"
-                height="10mm"
-                version="1.1"
-                viewBox="0 0 500 500"
-                id="svg12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs id="defs16" />
-                <g id="g10">
-                  <text
-                    x="-10.525219"
-                    y="482.90366"
-                    fill="#ffffff"
-                    font-family="Cardo"
-                    font-size="669.46px"
-                    stroke-width="106.9"
-                    id="text4"
-                  >
-                    <tspan
-                      x="-10.525219"
-                      y="482.90366"
-                      fill="#ffffff"
-                      stroke-width="106.9"
-                      id="tspan2"
-                    >
-                      C
-                    </tspan>
-                  </text>
-                  <path
-                    d="m471.87 364.26-198.9-344.5"
-                    fill="none"
-                    stroke="#fff"
-                    stroke-width="10.012"
-                    id="path6"
-                  />
-                  <path
-                    d="m250 287.99a53.572 53.572 45 0 0-37.994-37.994 53.572 53.572 135 0 0 37.994-37.994 53.572 53.572 45 0 0 37.994 37.994 53.572 53.572 135 0 0-37.994 37.994z"
-                    fill="#fff"
-                    stroke="#fff"
-                    stroke-width="6.1535"
-                    id="path8"
-                  />
-                </g>
-              </svg>
+              <Image src={LogoWhite} alt="Logo White" height={50} width={50} />
             ) : (
-              <svg
-                width="10mm"
-                height="10mm"
-                version="1.1"
-                viewBox="0 0 500 500"
-                id="svg12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs id="defs16" />
-                <g id="g10">
-                  <text
-                    x="-10.525219"
-                    y="482.90366"
-                    fill="#292929"
-                    font-family="Cardo"
-                    font-size="669.46px"
-                    stroke-width="106.9"
-                    id="text4"
-                  >
-                    <tspan
-                      x="-10.525219"
-                      y="482.90366"
-                      fill="#292929"
-                      stroke-width="106.9"
-                      id="tspan2"
-                    >
-                      C
-                    </tspan>
-                  </text>
-                  <path
-                    d="m471.87 364.26-198.9-344.5"
-                    fill="none"
-                    stroke="#292929"
-                    stroke-width="10.012"
-                    id="path6"
-                  />
-                  <path
-                    d="m250 287.99a53.572 53.572 45 0 0-37.994-37.994 53.572 53.572 135 0 0 37.994-37.994 53.572 53.572 45 0 0 37.994 37.994 53.572 53.572 135 0 0-37.994 37.994z"
-                    fill="#292929"
-                    stroke="#292929"
-                    stroke-width="6.1535"
-                    id="path8"
-                  />
-                </g>
-              </svg>
+              <Image src={LogoBlack} alt="Logo Black" height={50} width={50} />
             )}
           </Link>
         </div>
