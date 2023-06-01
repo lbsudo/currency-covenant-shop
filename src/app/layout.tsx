@@ -1,14 +1,14 @@
-import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
-import {Roboto} from 'next/font/google'
+import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
-  weight: '500',
-  subsets: ['latin'],
-  display: 'swap',
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "auto",
 });
 
 export const metadata = {
