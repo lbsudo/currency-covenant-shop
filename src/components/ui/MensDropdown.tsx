@@ -40,7 +40,7 @@ function MensDropdown() {
       MENS
       {showMensDropdown && (
         <div
-          className={` absolute top-[60px] left-0 w-full h-screen xl:h-12 lg:p-2 xl:flex xl:items-center ${
+          className={` absolute top-[60px] left-0 w-full h-screen xl:h-12 lg:p-2 xl:flex xl:items-center mt-2 ${
             isDarkMode ? "bg-dark-primary border-primary  " : "border-dark-primary bg-primary"
           } border-t border-b`}
           onMouseEnter={cancelHideMensDropdown}

@@ -36,7 +36,7 @@ function CollectionsDropdown() {
       onMouseEnter={toggleCollectionsDropdown} onMouseLeave={hideCollectionsDropdown}>
       COLLECTIONS
       {showCollectionsDropdown && (
-        <div className={` absolute top-[60px] left-0 w-full h-screen lg:flex lg:items-center lg:h-12 ${isDarkMode ? 'border-primary bg-dark-primary ' : 'border-dark-primary bg-primary'} border-t border-b`}
+        <div className={` absolute top-[60px] left-0 w-full h-screen lg:flex lg:items-center lg:h-12 mt-2 ${isDarkMode ? 'border-primary bg-dark-primary ' : 'border-dark-primary bg-primary'} border-t border-b`}
           onMouseEnter={cancelHideCollectionsDropdown}
           onMouseLeave={hideCollectionsDropdown}
         >
