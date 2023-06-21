@@ -41,8 +41,8 @@ export default function ProductPage({ product }: any) {
                     onClick={() => handleVariantChange(variant)}
                   >
                     {variant.id === selectedVariant.id
-                      ? `[${variant.name.match(/\b(?:S\/M|L\/XL|S|M|L|XL|2XL|3XL|4XL|\d+(?:\.\d+)?)(?=\s|$)\b/) }]`
-                      : variant.name.match(/\b(?:S\/M|L\/XL|S|M|L|XL|2XL|3XL|4XL|\d+(?:\.\d+)?)(?=\s|$)\b/)}
+                      ? `[${variant.name.match(/\b(?:S\/M|L\/XL|S|M|L|XL|2XL|3XL|XS|\d+(?:\.\d+)?)(?=\s|$)\b/) }]`
+                      : variant.name.match(/\b(?:S\/M|L\/XL|S|M|L|XL|2XL|3XL|XS|\d+(?:\.\d+)?)(?=\s|$)\b/)}
                   </button>
                 ))}
               </div>

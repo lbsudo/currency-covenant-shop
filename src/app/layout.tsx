@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Product } from "../types";
 import { Providers } from "./providers";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
@@ -15,6 +16,7 @@ export const metadata = {
   title: "Currency Covenant Shop",
   description: "The Official Store of The Covenant",
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
